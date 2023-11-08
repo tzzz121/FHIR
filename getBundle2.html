@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -76,9 +76,12 @@ if (bundle.resourceType === "Bundle") {
     thisResource =bundle.entry[i].resource;
     id= thisResource.id;
     name =  thisResource.subject.display;
+    Data=thisResource.valueQuantity.value
     output +=  id;
     output += ',';
     output +=  name;
+    output += ',呼吸頻率:';
+    output +=  Data;
     output += '\n';
     }
     document.getElementById("TextArea1").value = output;  
